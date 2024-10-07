@@ -1,0 +1,24 @@
+.darkblue-bg {
+    background-color: #5762EF;
+}
+
+.purple-bg {
+    background: #652CB3;
+}
+
+.rounded-border {
+    border-radius: 5px;
+}
+
+.key-help {
+    background: #1FE7FF;
+}
+
+.piano-note {
+    height: 1em;
+    width: 0.5em;
+}
+
+.black-note {
+    background: black;
+}
