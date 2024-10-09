@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body {
+    header {
+        display:flex;
+        flex-direction:row;
+        padding: 15px;
+        font-weight:bolder;
+        font-size: 30px;
+        background-color:#fac710; 
+        color: #000000;
+        height: 50px;
+        padding-top: 7px;
+        .logo {
+            width: 75px;
+            height: 70px;
+            padding-top: -4px;
+            padding-bottom: 5px; 
+            margin-bottom: 15px;
+        }
+        menu{
+            font-weight: 800;
+            font-size: large;
+            margin-left: 200px;
+            row-gap: 20px;
+            padding-top: 10px;
+            }
+    }
+    main {
+        .header{
+        background-color:#ffffff; 
+        height: 200px;
+        margin-left: 30px;
+        margin-right: 30px;
+        .cta-header {
+            color:#ffffff;
+            background-color:#FD625D;
+            border-color: #652cb3;
+            border-radius: 12px;
+            padding:10px;
+            font-size: large;
+
+        }
+        }
+        .choose-instrument-block{
+            display:flex;
+            flex-direction:row;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-bottom: 20px;
+            gap:30px;
+            justify-content: space-between;
+        .piano-class-btn{
+            display:flex;
+            flex-direction: column;
+            justify-items: left;
+            box-sizing: content-box; 
+            width: 400px;
+            height: 200px;
+            background-color:#5762ef;
+            color:#ffffff;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            box-shadow: 10px 10px #8223ff; 
+            font-size: 20px;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+
+        }
+        .guitar-class-btn{
+            display:flex;
+            flex-direction: column;
+            box-sizing: content-box; 
+            width: 400px;
+            height: 200px;
+            background-color:#5762ef;
+            color:#ffffff;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            box-shadow: 10px 10px #8223ff; 
+            font-size: 20px;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .flute-class-btn{
+            display:flex;
+            flex-direction: column;
+            box-sizing: content-box; 
+            width: 400px;
+            height: 200px;
+            background-color:#5762ef;
+            color:#ffffff;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            box-shadow: 10px 10px #8223ff; 
+            font-size: 20px;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        }
+        .contact-form-block{
+            background-color:#eeeeee; 
+            height: 200px;
+        }
+    }
+}
