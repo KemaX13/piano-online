@@ -6,31 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nota a nota - Piano</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Graduate' rel='stylesheet'>
 </head>
 
 <body>
     <header></header>
 
     <main>
-        <div class="title-piano darkblue-bg rounded-border"><h2><p>Piano</p></h2></div>
+        <div class="title-piano darkblue-bg rounded-border"><h2><p class="font-graduate">Piano</p></h2></div>
 
         <section class="piano-btns">
             <div class="key-help rounded-border">
-                <button class="keyboard"><img src="" alt="keyboard"></button>
-                <button class="solfeo"><img src="" alt="solfeo"></button>
+                <button class="keyboard">⌨️</button>
+                <button class="solfeo">🎵</button>
             </div>
 
-            <div class="instruccions purple-bg rounded-border"><button class="rounded-border darkblue-bg"><p>instrucciones</p></button>
-            <div class="play purple-bg rounded-border"><button class="rounded-border"><p>jugar</p></button>
+            <div class="inst-play">
+                <div class="instruccions purple-bg rounded-border">
+                    <button class="rounded-border darkblue-bg">
+                        <p class="font-graduate">instrucciones</p>
+                    </button>
+                </div>
+                <div class="play purple-bg rounded-border">
+                    <button class="rounded-border magenta-bg">
+                        <p class="font-graduate">jugar</p>
+                    </button>
+                </div>
             </div>
 
             <div class="char-box purple-bg rounded-border">
                 <img src="" alt="character">
-                <div class="char-text darkblue-bg rounded-border"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+                <div class="char-text darkblue-bg rounded-border"><p class="font-graduate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
             </div>
         </section>
 
-        <section class="piano rounded-border">
+        <section class="piano">
+            <section class="octava inferior">
+                <div class="white-note do-key rounded-border"></div>
+                <div class="black-note do#-key rounded-border"></div>
+                <div class="white-note re-key rounded-border"></div>
+                <div class="black-note re#-key rounded-border"></div>
+                <div class="white-note mi-key rounded-border"></div>
+                <div class="white-note fa-key rounded-border"></div>
+                <div class="black-note fa#-key rounded-border"></div>
+                <div class="white-note sol-key rounded-border"></div>
+                <div class="black-note sol#-key rounded-border"></div>
+                <div class="white-note la-key rounded-border"></div>
+                <div class="black-note la#-key rounded-border"></div>
+                <div class="white-note si-key rounded-border"></div>
+            </section>
+
             <section class="octava central">
                 <div class="white-note do-key rounded-border"></div>
                 <div class="black-note do#-key rounded-border"></div>
@@ -47,18 +72,18 @@
             </section>
 
             <section class="octava superior">
-                <div class="piano-note do-key rounded-border"></div>
-                <div class="piano-note black-note do#-key rounded-border"></div>
-                <div class="piano-note re-key rounded-border"></div>
-                <div class="piano-note black-note re#-key rounded-border"></div>
-                <div class="piano-note mi-key rounded-border"></div>
-                <div class="piano-note fa-key rounded-border"></div>
-                <div class="piano-note black-note fa#-key rounded-border"></div>
-                <div class="piano-note sol-key rounded-border"></div>
-                <div class="piano-note black-note sol#-key rounded-border"></div>
-                <div class="piano-note la-key rounded-border"></div>
-                <div class="piano-note black-note la#-key rounded-border"></div>
-                <div class="piano-note si-key rounded-border"></div>
+                <div class="white-note do-key rounded-border"></div>
+                <div class="black-note do#-key rounded-border"></div>
+                <div class="white-note re-key rounded-border"></div>
+                <div class="black-note re#-key rounded-border"></div>
+                <div class="white-note mi-key rounded-border"></div>
+                <div class="white-note fa-key rounded-border"></div>
+                <div class="black-note fa#-key rounded-border"></div>
+                <div class="white-note sol-key rounded-border"></div>
+                <div class="black-note sol#-key rounded-border"></div>
+                <div class="white-note la-key rounded-border"></div>
+                <div class="black-note la#-key rounded-border"></div>
+                <div class="white-note si-key rounded-border"></div>
             </section>
         </section>
 

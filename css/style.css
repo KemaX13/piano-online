@@ -1,24 +1,141 @@
-.darkblue-bg {
-    background-color: #5762EF;
+body {
+    button {
+        border: none;
+    }
+
+    .darkblue-bg {
+        background-color: #5762EF;
+    }
+    
+    .purple-bg {
+        background: #652CB3;
+    }
+    
+    .magenta-bg {
+        background: #F72754;
+    }
+    
+    .font-graduate {
+        font-family: 'Graduate', sans-serif;
+        font-weight: bold;
+        color: white;
+    }
+
+    .rounded-border {
+        border-radius: 5px;
+    }
 }
 
-.purple-bg {
-    background: #652CB3;
+.title-piano {
+    align-items: start;
+    text-align: center;
+
+    width: 6em;
+    height: 2em;
 }
 
-.rounded-border {
-    border-radius: 5px;
+.piano-btns {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: end;
+
+    z-index: 1;
+    
+    div {
+        display: flex;
+        flex-direction: row;
+
+        justify-items: center;
+        align-items: center;
+
+        padding: 5px;
+        margin-bottom: -0.4em;
+    }
+
+    .key-help {
+        gap: 5px;
+        background: #1FE7FF;
+
+        button {
+            border-radius: 50%;
+        }
+    }
+
+    .inst-play {
+        gap: 15px;
+
+        div {
+            height: 2.5em;
+            width: 10em;
+
+            padding: 0.5em 0.75em;
+        }
+    }
+
+    .char-box {
+        font-size: 0.5em;
+    }
 }
 
-.key-help {
-    background: #1FE7FF;
-}
+.piano {
+    display: flex;
+    justify-content: row;
+    
+    gap: 5px;
+    padding: 15px;
 
-.piano-note {
-    height: 1em;
-    width: 0.5em;
-}
+    border-radius: 25px;
+    background: #1FFFC6;
 
-.black-note {
-    background: black;
+    section {
+        display: flex;
+        flex-direction: row;
+
+        gap: 0.5em;
+
+        .white-note {
+            height: 8em;
+            width: 2em;
+        }
+        
+        .black-note {
+            margin: 0 -0.75em;
+            z-index: 1;
+            
+            height: 6em;
+            width: 1em;
+            
+            background: black; 
+        }
+
+        .do-key {
+            background: #DA0063;
+        }
+        
+        .re-key {
+            background: #F24726;
+        }
+    
+        .mi-key {
+            background: #CEE741;
+        }
+    
+        .fa-key {
+            background: #8FD14F;
+        }
+    
+        .sol-key {
+            background: #12CDD4;
+        }
+    
+        .la-key {
+            background: #2D9BF0;
+        }
+    
+        .si-key {
+            background: #414BB2;
+        }
+    }
 }
