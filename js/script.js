@@ -2,7 +2,7 @@ const keys = document.querySelectorAll(".key");
 
 function playNote(e) {
     const noteValue = e.target.getAttribute('data-note');
-    const noteSound = new Audio("/sounds/" + noteValue + ".mp3");
+    const noteSound = new Audio("/sounds/studio-grand-" + noteValue + ".mp3");
     
     noteSound.play();
     e.target.className += " no-border";
@@ -10,7 +10,7 @@ function playNote(e) {
 
 function resetNote(e) {
     const noteValue = e.target.getAttribute('data-note');
-    const noteSound = new Audio("/sounds/" + noteValue + ".mp3");
+    const noteSound = new Audio("/sounds/studio-grand-" + noteValue + ".mp3");
 
     noteSound.pause();
     noteSound.currentTime = 0;
