@@ -22,16 +22,21 @@ body {
     }
 
     .rounded-border {
-        border-radius: 5px;
+        border-radius: 10px;
     }
 }
 
 .title-piano {
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 
     width: 6em;
-    height: 2em;
+    height: 2.5em;
+
+    h2 {
+        margin: 0;
+    }
 }
 
 .piano-btns {
@@ -67,10 +72,17 @@ body {
         gap: 15px;
 
         div {
-            height: 2.5em;
+            height: 1.75em;
             width: 10em;
 
-            padding: 0.5em 0.75em;
+            button {
+                width: 100%;
+                height: 100%;
+
+                p {
+                    margin: 0;
+                }
+            }
         }
     }
 
@@ -79,7 +91,7 @@ body {
     }
 }
 
-.piano {
+.piano-notes {
     display: flex;
     justify-content: row;
     
@@ -88,6 +100,8 @@ body {
 
     border-radius: 25px;
     background: #1FFFC6;
+
+    width: max-content;
 
     section {
         display: flex;
@@ -100,6 +114,15 @@ body {
             width: 2em;
         }
         
+        .border-bottom {
+            box-sizing: border-box;
+            border-bottom: 0.25em solid;
+        }
+
+        .no-border {
+            border-bottom-width: 0;
+        }
+
         .black-note {
             margin: 0 -0.75em;
             z-index: 1;
@@ -107,35 +130,43 @@ body {
             height: 6em;
             width: 1em;
             
-            background: black; 
+            background: black;
+            border-bottom-color: rgb(99, 99, 99);
         }
 
         .do-key {
             background: #DA0063;
+            border-bottom-color: #a7004b;
         }
         
         .re-key {
             background: #F24726;
+            border-bottom-color: #bd381d;
         }
     
         .mi-key {
             background: #CEE741;
+            border-bottom-color: #95a72f;
         }
     
         .fa-key {
             background: #8FD14F;
+            border-bottom-color: #649236;
         }
     
         .sol-key {
             background: #12CDD4;
+            border-bottom-color: #0a858a;
         }
     
         .la-key {
             background: #2D9BF0;
+            border-bottom-color: #1e659c;
         }
     
         .si-key {
             background: #414BB2;
+            border-bottom-color: #2e357e;
         }
     }
 }
