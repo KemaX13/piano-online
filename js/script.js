@@ -32,28 +32,32 @@ instruccionesBtn.addEventListener('click', escribir_instrucciones);
 
 function juego() {
     const NOTAS_CANCION = ['do2', 'do#2', 're#2'];
+    const LETRAS_CANCION = ['A', 'B', 'D'];
     let i = 0;
     let cancionFinalizada = false;
-
-    function handleKeyPress(e) {
+    function comprobarTecla(e) {
         if (cancionFinalizada) return;
-
         const notaPulsada = e.target.getAttribute('data-note');
+        const letraPulsada = e.target.getAttribute('data-key');
         const notaActual = NOTAS_CANCION[i];
-        charText.textContent = notaActual;
+        const letraActual = LETRAS_CANCION[i];
+        charText.textContent = notaActual + ' / ' + letraActual;
 
-        if (notaPulsada === notaActual) {
+        if ((notaPulsada === notaActual) || (letraPulsada === letraActual)) {
             i++;
             if (i < NOTAS_CANCION.length) {
-                charText.textContent = NOTAS_CANCION[i];
+                charText.textContent = NOTAS_CANCION[i] + ' / ' + LETRAS_CANCION[i];
             } else {
                 cancionFinalizada = true;
                 charText.textContent = '¡Canción finalizada!';
             }
         }
+        else {
+            charText.textContent = '¡Error! Inténtalo de nuevo';
+        }
     }
 
-    keys.forEach(key => key.addEventListener('click', handleKeyPress));
-    charText.textContent = NOTAS_CANCION[i];
+    keys.forEach(key => key.addEventListener('click', comprobarTecla));
+    charText.textContent = NOTAS_CANCION[i] + ' / ' + LETRAS_CANCION[i];
 }
 jugarBtn.addEventListener('click', juego);
