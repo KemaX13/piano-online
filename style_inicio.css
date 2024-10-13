@@ -8,36 +8,50 @@
 
 body {
     header {
-        display:flex;
-        flex-direction:row;
-        padding: 15px;
-        font-weight:bolder;
-        font-size: 25px;
-        background-color:#fac710; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 5px;
+        background-color: #fac710;
         color: #000000;
-        height: 50px;
-        padding-top: 7px;
-        .logo {
-            display:flex;
-        flex-direction:column;
-            width: 75px;
-            height: 70px;
-            padding-top: -4px;
-            padding-bottom: 5px; 
-            margin-bottom: 15px;
-        }
-        .menu{
-            display:flex;
-        flex-direction:column;
-            font-weight: 800;
-            font-size: 60%;
-            align-items: right;
-            justify-content: right;
-            row-gap: 20px;
-            padding-top: 10px;
-            color:#000000;
-            }
+        height: 80px; 
+        overflow: visible; 
     }
+    
+    .logo-container {
+        display: flex; 
+        align-items: center; 
+    }
+    
+    .logo {
+        width: 120px; 
+        position: relative; 
+        top: 10px; 
+        padding-top: 20px;
+    }
+    
+    .Nombre-web {
+        margin-left: 10px; 
+        font-size: 250%;
+        font-family: 'Trebuchet MS', sans-serif;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        font-weight: 800;
+
+    }
+    
+    .menu {
+        display: flex; 
+    }
+    
+    .menu a {
+        margin-left: 20px; 
+        color: #000000; 
+        text-decoration: none; 
+        font-size: 30px;
+    }
+     
+}
     main {
         .header{
         background-color:#ffffff; 
@@ -67,8 +81,8 @@ body {
                 border-radius: 17px;
                 padding:10px;
                 font-size: 80%;
-                margin-bottom: 10%;
-                margin-top: 7%;    
+                margin-bottom: 5%;
+                margin-top: 2%;    
             }
         }
         }
@@ -208,7 +222,7 @@ body {
         width:200px;
         margin-top: 40px;
         height:50px;
-        font-weight: 800;
+        font-weight: 650;
         font-size: 70%;
         color:#ffffff;
         background-color: #FD625D;
@@ -218,9 +232,7 @@ body {
         }  
     }
 }
-}
       
-
     .cursos-online{
         font-size: 200%;
         display:flex;
@@ -238,15 +250,34 @@ body {
 
         }  
     }
-    footer{
-        background-color:#000000; 
-        height: 30px;
-        color:#ffffff;
-        display:flex;
-        flex-direction: row;
-        height: 100px;
-        padding-top: 10px;
+    footer {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 10px 20px;
         margin-top: 30px;
-
-
+        height: auto; /* Ajusta la altura del footer según el contenido */
+        overflow: hidden; /* Asegura que el footer contenga los elementos flotantes */
     }
+    
+    .footer-column-left {
+        float: left; /* Flota esta columna a la izquierda */
+        width: 50%; /* Ocupa la mitad del ancho */
+    }
+    
+    .footer-column-right {
+        float: right; /* Flota esta columna a la derecha */
+        width: 50%; /* Ocupa la mitad del ancho */
+        text-align: right; /* Alinea el texto a la derecha */
+    }
+    
+    .footer-column-left a {
+        color: #ffffff;
+        text-decoration: none;
+        display: block; /* Hace que los enlaces estén uno debajo del otro */
+        margin-bottom: 10px;
+    }
+    
+    .footer-column-left a:hover {
+        text-decoration: underline;
+    }
+    
