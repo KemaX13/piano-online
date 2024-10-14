@@ -26,14 +26,24 @@ body {
     }
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10em;
+    margin: 2em 3em;
+}
+
 .title-piano {
     justify-content: center;
     align-items: center;
     text-align: center;
 
-    width: 6em;
-    height: 2.5em;
+    width: 12vw;
+    height: 5vh;
 
+    font-size: 2em;
+    
     h2 {
         margin: 0;
     }
@@ -56,38 +66,50 @@ body {
         align-items: center;
 
         padding: 5px;
-        margin-bottom: -0.4em;
+        margin-bottom: -0.4vh;
     }
 
     .key-help {
+        justify-content: space-around;
+
+        height: 5vh;
+        width: 5vw;
+
         gap: 5px;
         background: #1FE7FF;
 
         button {
+            height: 4vh;
+            width: 2vw;
+
             border-radius: 50%;
+            font-size: 1vw;
         }
     }
 
     .inst-play {
-        gap: 15px;
+        gap: 25px;
 
         div {
-            height: 1.75em;
-            width: 10em;
+            height: 5vh;
+            width: 10vw;
+            
+            justify-content: center;
 
             button {
-                width: 100%;
-                height: 100%;
+                width: 90%;
+                height: 90%;
 
                 p {
                     margin: 0;
+                    font-size: 1vw;
                 }
             }
         }
     }
 
     .char-box {
-        font-size: 0.5em;
+        font-size: 1vw;
     }
 }
 
@@ -107,31 +129,31 @@ body {
         display: flex;
         flex-direction: row;
 
-        gap: 0.5em;
+        gap: 0.5vw;
 
         .white-note {
-            height: 8em;
-            width: 2em;
+            height: 28vh;
+            width: 3vw;
+        }
+
+        .black-note {
+            margin: 0 -1.25vw;
+            z-index: 1;
+            
+            height: 20vh;
+            width: 2vw;
+            
+            background: black;
+            border-bottom-color: rgb(99, 99, 99);
         }
         
         .border-bottom {
             box-sizing: border-box;
-            border-bottom: 0.25em solid;
+            border-bottom: 2vh solid;
         }
 
         .no-border {
             border-bottom-width: 0;
-        }
-
-        .black-note {
-            margin: 0 -0.75em;
-            z-index: 1;
-            
-            height: 6em;
-            width: 1em;
-            
-            background: black;
-            border-bottom-color: rgb(99, 99, 99);
         }
 
         .do-key {
