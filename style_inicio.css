@@ -124,7 +124,7 @@ body {
         }
 
     
-        .guitar-class-btn{
+        #guitar-class-btn{
             display:flex;
             flex-direction: column;
             box-sizing: content-box; 
@@ -137,12 +137,13 @@ body {
             border-radius: 17px;
             box-shadow: 10px 10px #8223ff; 
             font-size: 30px;
+            transition: all 0.3s ease;
             img {
                 width: 180px;
                 height: 180px;
             }
         }
-        .flute-class-btn{
+        #flute-class-btn{
             display:flex;
             flex-direction: column;
             box-sizing: content-box; 
@@ -155,6 +156,7 @@ body {
             border-radius: 17px;
             box-shadow: 10px 10px #8223ff; 
             font-size: 30px;
+            transition: all 0.3s ease;
             img {
                 width: 180px;
                 height: 180px;
@@ -258,25 +260,25 @@ body {
         color: #ffffff;
         padding: 10px 20px;
         margin-top: 30px;
-        height: auto; /* Ajusta la altura del footer según el contenido */
-        overflow: hidden; /* Asegura que el footer contenga los elementos flotantes */
+        height: auto; 
+        overflow: hidden; 
     }
     
     .footer-column-left {
-        float: left; /* Flota esta columna a la izquierda */
-        width: 50%; /* Ocupa la mitad del ancho */
+        float: left; 
+        width: 50%; 
     }
     
     .footer-column-right {
-        float: right; /* Flota esta columna a la derecha */
-        width: 50%; /* Ocupa la mitad del ancho */
-        text-align: right; /* Alinea el texto a la derecha */
+        float: right; 
+        width: 50%; 
+        text-align: right; 
     }
     
     .footer-column-left a {
         color: #ffffff;
         text-decoration: none;
-        display: block; /* Hace que los enlaces estén uno debajo del otro */
+        display: block; 
         margin-bottom: 10px;
     }
     
