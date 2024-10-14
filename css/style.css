@@ -35,160 +35,184 @@ main {
 }
 
 .title-piano {
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 
-    width: 12vw;
-    height: 5vh;
+    width: clamp(100px, 8vw, 8vw);
+    height: clamp(50px, 5vh, 5vh);
 
-    font-size: 2em;
-    
+    font-size: calc(1.75vh * 1.75vw);
+
     h2 {
         margin: 0;
     }
 }
 
-.piano-btns {
+.piano {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    justify-content: space-around;
-    align-items: end;
+    align-items: center;
+    width: clamp(370px, 95%, 95%);
 
-    z-index: 1;
-    
-    div {
+    .piano-btns {
+        width: clamp(320px, 95%, 95%);
+
         display: flex;
         flex-direction: row;
-
-        justify-items: center;
-        align-items: center;
-
-        padding: 5px;
-        margin-bottom: -0.4vh;
-    }
-
-    .key-help {
+    
         justify-content: space-around;
-
-        height: 5vh;
-        width: 5vw;
-
-        gap: 5px;
-        background: #1FE7FF;
-
-        button {
-            height: 4vh;
-            width: 2vw;
-
-            border-radius: 50%;
-            font-size: 1vw;
-        }
-    }
-
-    .inst-play {
-        gap: 25px;
-
+        align-items: end;
+    
+        z-index: 1;
+        
         div {
-            height: 5vh;
-            width: 10vw;
-            
-            justify-content: center;
-
-            button {
-                width: 90%;
-                height: 90%;
-
+            display: flex;
+            flex-direction: row;
+    
+            align-items: center;
+    
+            padding: 5px;
+            margin-bottom: -0.4vh;
+        }
+    
+        .key-help {
+            justify-content: space-around;
+    
+            height: clamp(50px, 5vh, 5vh);
+            width: clamp(100px, 5vw, 5vw);
+    
+            gap: 5px;
+            background: #1FE7FF;
+    
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                height: clamp(40px, 4vh, 4vh);
+                width: clamp(40px, 2vh, 2vh);
+    
+                border-radius: 50%;
+                font-size: calc(1.75vh * 1.75vw);
+    
+                background: white;
+            }
+        }
+    
+        .inst-play {
+            gap: clamp(5px, 1vw, 1vw);
+    
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                height: clamp(50px, 5vh, 5vh);
+                width: clamp(175px, 10vw, 10vw);
+                font-size: calc(1.75vh * 1.75vw);
+    
                 p {
-                    margin: 0;
-                    font-size: 1vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    width: 90%;
+                    height: 90%;
                 }
             }
         }
+    
+        .char-box {
+            height: clamp(50px, 15vh, 15vh);
+            width: clamp(100px, 15vw, 15vw);
+    
+            font-size: calc(1.75vh * 1.75vw);
+        }
     }
-
-    .char-box {
-        font-size: 1vw;
+    
+    .piano-notes {
+        display: flex;
+        justify-content: row;
+        
+        gap: 5px;
+        padding: 15px;
+    
+        border-radius: 25px;
+        background: #1FFFC6;
+    
+        width: max-content;
+    
+        section {
+            display: flex;
+            flex-direction: row;
+    
+            gap: 0.5vw;
+    
+            .white-note {
+                height: 30vh;
+                width: 3.5vw;
+            }
+    
+            .black-note {
+                margin: 0 -1.75vw;
+                z-index: 1;
+                
+                height: 20vh;
+                width: 3vw;
+                
+                background: black;
+                border-bottom-color: rgb(99, 99, 99);
+            }
+            
+            .border-bottom {
+                box-sizing: border-box;
+                border-bottom: 2vh solid;
+            }
+    
+            .no-border {
+                border-bottom-width: 0;
+            }
+    
+            .do-key {
+                background: #DA0063;
+                border-bottom-color: #a7004b;
+            }
+            
+            .re-key {
+                background: #F24726;
+                border-bottom-color: #bd381d;
+            }
+        
+            .mi-key {
+                background: #CEE741;
+                border-bottom-color: #95a72f;
+            }
+        
+            .fa-key {
+                background: #8FD14F;
+                border-bottom-color: #649236;
+            }
+        
+            .sol-key {
+                background: #12CDD4;
+                border-bottom-color: #0a858a;
+            }
+        
+            .la-key {
+                background: #2D9BF0;
+                border-bottom-color: #1e659c;
+            }
+        
+            .si-key {
+                background: #414BB2;
+                border-bottom-color: #2e357e;
+            }
+        }
     }
 }
 
-.piano-notes {
-    display: flex;
-    justify-content: row;
-    
-    gap: 5px;
-    padding: 15px;
+@media (max-width: 370px) {
 
-    border-radius: 25px;
-    background: #1FFFC6;
-
-    width: max-content;
-
-    section {
-        display: flex;
-        flex-direction: row;
-
-        gap: 0.5vw;
-
-        .white-note {
-            height: 28vh;
-            width: 3vw;
-        }
-
-        .black-note {
-            margin: 0 -1.25vw;
-            z-index: 1;
-            
-            height: 20vh;
-            width: 2vw;
-            
-            background: black;
-            border-bottom-color: rgb(99, 99, 99);
-        }
-        
-        .border-bottom {
-            box-sizing: border-box;
-            border-bottom: 2vh solid;
-        }
-
-        .no-border {
-            border-bottom-width: 0;
-        }
-
-        .do-key {
-            background: #DA0063;
-            border-bottom-color: #a7004b;
-        }
-        
-        .re-key {
-            background: #F24726;
-            border-bottom-color: #bd381d;
-        }
-    
-        .mi-key {
-            background: #CEE741;
-            border-bottom-color: #95a72f;
-        }
-    
-        .fa-key {
-            background: #8FD14F;
-            border-bottom-color: #649236;
-        }
-    
-        .sol-key {
-            background: #12CDD4;
-            border-bottom-color: #0a858a;
-        }
-    
-        .la-key {
-            background: #2D9BF0;
-            border-bottom-color: #1e659c;
-        }
-    
-        .si-key {
-            background: #414BB2;
-            border-bottom-color: #2e357e;
-        }
-    }
 }
