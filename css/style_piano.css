@@ -1,4 +1,17 @@
+
 body {
+    .breadcrumb {
+        display: flex;
+        list-style: none;
+        text-decoration: none; 
+        color:black;
+        }
+        .breadcrumb-item + .breadcrumb-item::before {
+        content: '>';
+        padding: 0 5px;
+        text-decoration: none; 
+        color:black;
+    }
     button {
         border: none;
     }
