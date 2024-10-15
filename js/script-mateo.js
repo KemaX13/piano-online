@@ -1,32 +1,45 @@
 const keys = document.querySelectorAll(".key");
+const noteSounds = {};
+const keyMap = {};
+let currentOctave = 3;
+
+keys.forEach((key, i) => {
+  const dataNote = key.getAttribute("data-key");
+  keyMap[dataNote] = key.getAttribute("data-note");
+});
 
 function playNote(noteValue, isDown) {
-  const noteSound = new Audio("/sounds/studio-grand-" + noteValue + ".mp3");
+  if (!noteSounds[noteValue])
+    noteSounds[noteValue] = new Audio("/sounds/studio-grand-" + noteValue + ".mp3");
   
-  if(isDown) {
-    noteSound.play();
+  if (isDown) {
+    noteSounds[noteValue].play();
     e.target.classList.add("no-border");
   } else {
-    noteSound.pause();
-    noteSound.currentTime = 0;
+    noteSounds[noteValue].pause();
+    noteSounds[noteValue].currentTime = 0;
     e.target.classList.remove("no-border");
   }
 }
 
 function playNoteMouse(e, isDown) {
   const noteValue = e.target.getAttribute("data-note");
-  playNote(noteValue, isDown);
+  if (noteValue) {
+    playNote(noteValue, isDown);
+  } else {
+    console.error("Elemento no tiene atributo data-note");
+  }
 }
 
 function playNoteKey(e, isDown) {
   const noteValue = e.keyCode;
-  
-  for(var i = 0; i < keys.length; i++) {
-    if(keys[i].getAttribute("data-key") == noteValue) {
-      playNote(keys[i].getAttribute("data-note"), isDown);
-      break;
-    }
+  if (keyMap[noteValue]) {
+    playNote(keyMap[noteValue], isDown);
   }
+}
+
+function changeOctave(i) {
+  currentOctave += i;
 }
 
 keys.forEach(key => {
@@ -34,18 +47,8 @@ keys.forEach(key => {
   key.addEventListener("mouseup", (e) => playNoteMouse(e, false));
 });
 
-// function playNote(e) {
-//   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
-//     key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-
-//   if (!key) return;
-
-//   const keyNote = key.getAttribute("data-note");
-
-//   key.classList.add("playing");
-//   note.innerHTML = keyNote;
-//   audio.currentTime = 0;
-//   audio.play();
-// }
-
-window.addEventListener("keydown", (e) => playNoteKey(e, true));
+window.addEventListener("keydown", (e) => {
+  if (e.shiftKey) changeOctave(-1);
+  else if (e.key === 'Tab') changeOctave(1);
+  else  playNoteKey(e, true);
+});
