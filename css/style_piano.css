@@ -149,7 +149,12 @@ main {
             flex-direction: row;
     
             gap: 0.5vw;
-    
+            
+            .border-bottom {
+                box-sizing: border-box;
+                border-bottom: 2vh solid;
+            }
+
             .white-note {
                 height: 30vh;
                 width: 3.5vw;
@@ -166,11 +171,6 @@ main {
                 border-bottom-color: rgb(99, 99, 99);
             }
             
-            .border-bottom {
-                box-sizing: border-box;
-                border-bottom: 2vh solid;
-            }
-    
             .no-border {
                 border-bottom-width: 0;
             }
