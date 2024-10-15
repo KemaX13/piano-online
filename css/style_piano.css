@@ -1,0 +1,231 @@
+
+body {
+    .breadcrumb {
+        display: flex;
+        list-style: none;
+        text-decoration: none; 
+        color:black;
+        }
+        .breadcrumb-item + .breadcrumb-item::before {
+        content: '>';
+        padding: 0 5px;
+        text-decoration: none; 
+        color:black;
+    }
+    button {
+        border: none;
+    }
+
+    .darkblue-bg {
+        background-color: #5762EF;
+    }
+    
+    .purple-bg {
+        background: #652CB3;
+    }
+    
+    .magenta-bg {
+        background: #F72754;
+    }
+    
+    .font-graduate {
+        font-family: 'Graduate', sans-serif;
+        font-weight: bold;
+        color: white;
+    }
+
+    .rounded-border {
+        border-radius: 10px;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10em;
+    margin: 2em 3em;
+}
+
+.title-piano {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: clamp(100px, 8vw, 8vw);
+    height: clamp(50px, 5vh, 5vh);
+
+    font-size: calc(1.75vh * 1.75vw);
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.piano {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: clamp(370px, 95%, 95%);
+
+    .piano-btns {
+        width: clamp(320px, 95%, 95%);
+
+        display: flex;
+        flex-direction: row;
+    
+        justify-content: space-around;
+        align-items: end;
+    
+        z-index: 1;
+        
+        div {
+            display: flex;
+            flex-direction: row;
+    
+            align-items: center;
+    
+            padding: 5px;
+            margin-bottom: -0.4vh;
+        }
+    
+        .key-help {
+            justify-content: space-around;
+    
+            height: clamp(50px, 5vh, 5vh);
+            width: clamp(100px, 5vw, 5vw);
+    
+            gap: 5px;
+            background: #1FE7FF;
+    
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                height: clamp(40px, 4vh, 4vh);
+                width: clamp(40px, 2vh, 2vh);
+    
+                border-radius: 50%;
+                font-size: calc(1.75vh * 1.75vw);
+    
+                background: white;
+            }
+        }
+    
+        .inst-play {
+            gap: clamp(5px, 1vw, 1vw);
+    
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                height: clamp(50px, 5vh, 5vh);
+                width: clamp(175px, 10vw, 10vw);
+                font-size: calc(1.75vh * 1.75vw);
+    
+                p {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+        }
+    
+        .char-box {
+            height: clamp(50px, 15vh, 15vh);
+            width: clamp(100px, 15vw, 15vw);
+    
+            font-size: calc(1.75vh * 1.75vw);
+        }
+    }
+    
+    .piano-notes {
+        display: flex;
+        justify-content: row;
+        
+        gap: 5px;
+        padding: 15px;
+    
+        border-radius: 25px;
+        background: #1FFFC6;
+    
+        width: max-content;
+    
+        section {
+            display: flex;
+            flex-direction: row;
+    
+            gap: 0.5vw;
+            
+            .border-bottom {
+                box-sizing: border-box;
+                border-bottom: 2vh solid;
+            }
+
+            .white-note {
+                height: 30vh;
+                width: 3.5vw;
+            }
+    
+            .black-note {
+                margin: 0 -1.75vw;
+                z-index: 1;
+                
+                height: 20vh;
+                width: 3vw;
+                
+                background: black;
+                border-bottom-color: rgb(99, 99, 99);
+            }
+            
+            .no-border {
+                border-bottom-width: 0;
+            }
+    
+            .do-key {
+                background: #DA0063;
+                border-bottom-color: #a7004b;
+            }
+            
+            .re-key {
+                background: #F24726;
+                border-bottom-color: #bd381d;
+            }
+        
+            .mi-key {
+                background: #CEE741;
+                border-bottom-color: #95a72f;
+            }
+        
+            .fa-key {
+                background: #8FD14F;
+                border-bottom-color: #649236;
+            }
+        
+            .sol-key {
+                background: #12CDD4;
+                border-bottom-color: #0a858a;
+            }
+        
+            .la-key {
+                background: #2D9BF0;
+                border-bottom-color: #1e659c;
+            }
+        
+            .si-key {
+                background: #414BB2;
+                border-bottom-color: #2e357e;
+            }
+        }
+    }
+}
+
+@media (max-width: 370px) {
+
+}
