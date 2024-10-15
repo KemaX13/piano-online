@@ -8,7 +8,12 @@ body {
     }
     
     .purple-bg {
-        background: #652CB3;
+        background:#652CB3;
+        img {
+            width: 10%;
+            height: 10%;
+            padding-right: 1%;
+        }
     }
     
     .magenta-bg {
