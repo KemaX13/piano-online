@@ -31,8 +31,8 @@ instruccionesBtn.addEventListener('click', escribir_instrucciones);
 
 
 function juego() {
-    const NOTAS_CANCION = ['do2', 'do#2', 're#2'];
-    const LETRAS_CANCION = ['A', 'B', 'D'];
+    const NOTAS_CANCION = ["re3", "mi3", "sol3", "sol3", "sol3", "sol3", "sol3", "sol3", "re3", "mi3", "sol3", "sol3", "sol3", "sol3", "sol3", "sol3", "sol3", "sol3", "fa#3"];
+    const LETRAS_CANCION = ["S", "D", "R", "R", "R", "R", "R", "R", "S", "D", "R", "R", "R", "R", "R", "R","R", "R", "R", "E"];
     let i = 0;
     let cancionFinalizada = false;
     function comprobarTecla(e) {
