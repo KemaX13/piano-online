@@ -14,20 +14,25 @@ function playNote(noteValue, isDown) {
   
   if (isDown) {
     noteSounds[noteValue].play();
-    e.target.classList.add("no-border");
   } else {
     noteSounds[noteValue].pause();
     noteSounds[noteValue].currentTime = 0;
-    e.target.classList.remove("no-border");
   }
 }
 
 function playNoteMouse(e, isDown) {
   const noteValue = e.target.getAttribute("data-note");
+  
   if (noteValue) {
     playNote(noteValue, isDown);
   } else {
     console.error("Elemento no tiene atributo data-note");
+  }
+
+  if(isDown) {
+    e.target.className += " no-border";
+  } else {
+    e.target.classList.remove("no-border");
   }
 }
 
@@ -43,7 +48,7 @@ function changeOctave(i) {
 }
 
 keys.forEach(key => {
-  key.addEventListener("click", (e) => playNoteMouse(e, true));
+  key.addEventListener("mousedown", (e) => playNoteMouse(e, true));
   key.addEventListener("mouseup", (e) => playNoteMouse(e, false));
 });
 
