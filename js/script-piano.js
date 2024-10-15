@@ -52,8 +52,20 @@ keys.forEach(key => {
   key.addEventListener("mouseup", (e) => playNoteMouse(e, false));
 });
 
-window.addEventListener("keydown", (e) => {
+/*window.addEventListener("keydown", (e) => {
   if (e.shiftKey) changeOctave(-1);
   else if (e.key === 'Tab') changeOctave(1);
   else  playNoteKey(e, true);
-});
+});*/
+function playNoteKey(e, isDown) {
+  let noteValue;
+  if (e.shiftKey) {
+    noteValue = keyMap["Shift+" + e.key]; // Detectar combinación de Shift + letra
+  } else {
+    noteValue = keyMap[e.key]; // Detectar teclas normales
+  }
+
+  if (noteValue) {
+    playNote(noteValue, isDown);
+  }
+}
