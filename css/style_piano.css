@@ -1,8 +1,4 @@
 body {
-    button {
-        border: none;
-    }
-
     .darkblue-bg {
         background-color: #5762EF;
     }
@@ -30,7 +26,6 @@ main {
     display: flex;
     flex-direction: column;
 
-    gap: 10em;
     margin: 2em 3em;
 }
 
@@ -54,7 +49,9 @@ main {
     flex-direction: column;
 
     align-items: center;
-    width: clamp(370px, 95%, 95%);
+    width: clamp(80%, 95%, 95%);
+
+    margin-top: -5vh;
 
     .piano-btns {
         width: clamp(320px, 95%, 95%);
@@ -126,9 +123,14 @@ main {
     
         .char-box {
             height: clamp(50px, 15vh, 15vh);
-            width: clamp(100px, 15vw, 15vw);
-    
-            font-size: calc(1.75vh * 1.75vw);
+            width: max-content;
+            
+            .char-text {
+                width: clamp(100px, 15vw, 15vw);
+                height: 80%;
+                
+                font-size: calc(0.8vh * 0.8vw);
+            }
         }
     }
     
@@ -156,16 +158,16 @@ main {
             }
 
             .white-note {
-                height: 30vh;
-                width: 3.5vw;
+                height: clamp(100px, 30vh, 30vh);
+                width: clamp(30px, 3.5vw, 3.5vw);
             }
     
             .black-note {
                 margin: 0 -1.75vw;
                 z-index: 1;
                 
-                height: 20vh;
-                width: 3vw;
+                height: clamp(50px, 20vh, 20vh);
+                width: clamp(25px, 3vw, 3vw);
                 
                 background: black;
                 border-bottom-color: rgb(99, 99, 99);
@@ -213,6 +215,20 @@ main {
     }
 }
 
-@media (max-width: 370px) {
+@media (pointer: coarse) {
+    .inferior {
+        display: none !important;
+    }
 
+    .superior {
+        display: none !important;
+    }
+
+    .keyboard {
+        display: none !important;
+    }
+
+    .black-note { 
+        margin: 0 -3vw !important;
+    }
 }
