@@ -199,6 +199,7 @@ body {
                     height: 80%;
                     
                     font-size: calc(0.8vh * 0.8vw);
+                
                 }
             }
         }
@@ -298,6 +299,10 @@ body {
             font-size: 17px;
             text-transform: uppercase;
         }
+        
+    }
+    .piano-intro{
+        margin-top: 60px;
     }
 
     footer {
