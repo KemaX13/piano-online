@@ -11,23 +11,28 @@
 
 <body>
     <header>
+
         <div class="logo-container">
             <img class="logo" src="./imgcris/logo_notanota.png" alt="#">
             <p class="Nombre-web">Nota a Nota</p>
         </div>
+
         <nav class="menu">
             <a href="#">Cursos</a>
             <a href="#">Metodología</a>
             <a href="#">Sobre nosotros</a>
         </nav>
+
     </header>
 
     <main>
         <div class="breadcrumb">
-            <li class='breadcrumb-item'><a href='#'>Inicio</a></li>
+            <li class='breadcrumb-item'><a href='./index_inicio.html'>Inicio</a></li>
             <li class='breadcrumb-item active' aria-current='page'>Clases de piano</li>  
         </div>
+
         <div class="title-piano darkblue-bg rounded-border"><h2><p class="font-graduate">Piano</p></h2></div>
+
         <section class="piano">
             <section class="piano-btns">
                 <div class="key-help rounded-border">
@@ -36,67 +41,65 @@
                 </div>
     
                 <div class="inst-play">
-                    <div class="instruccions purple-bg rounded-border">
-                        <button id="instrucciones-btn" class="rounded-border darkblue-bg">
-                            <p class="font-graduate">instrucciones</p>
-                        </button>
+                    <div class="inst purple-bg rounded-border" id="instrucciones-btn">
+                            <p class="rounded-border darkblue-bg font-graduate">instrucciones</p>
                     </div>
-                    <div class="play purple-bg rounded-border">
-                        <button id= "jugar-btn"class="rounded-border magenta-bg">
-                            <p class="font-graduate">jugar</p>
-                        </button>
+                    <div class="play purple-bg rounded-border" id= "jugar-btn">
+                            <p class="rounded-border magenta-bg font-graduate">jugar</p>
                     </div>
                 </div>
     
                 <div class="char-box purple-bg rounded-border">
-                    <img src="" alt="character">
-                    <div id="char-text" class="char-text darkblue-bg rounded-border"><p class="font-graduate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+                    <img src="imgcris/informacion.png" alt="info" class="info">
+                    <div id="char-text" class="char-text darkblue-bg rounded-border"><p class="font-graduate">Lorem ipsum dolor sit amet.</p></div>
                 </div>
                 
             </section>
+
             <section class="piano-notes">
                 <section class="octava inferior">
                     <div class="key white-note do-key rounded-border border-bottom" data-key="A+<br>⇧" data-note="do2"><span class="keyboard-key"></span></div>
-                    <div class="key black-note do#-key rounded-border border-bottom" data-key="Q+<br>⇧" data-note="do#2"><span class="keyboard-key"></span></div>
+                    <div class="key black-note reb-key rounded-border border-bottom" data-key="W+<br>⇧" data-note="reb2"><span class="keyboard-key"></span></div>
                     <div class="key white-note re-key rounded-border border-bottom" data-key="S+<br>⇧" data-note="re2"><span class="keyboard-key"></span></div>
-                    <div class="key black-note re#-key rounded-border border-bottom" data-key="W+<br>⇧" data-note="re#2"><span class="keyboard-key"></span></div>
+                    <div class="key black-note mib-key rounded-border border-bottom" data-key="E+<br>⇧" data-note="mib2"><span class="keyboard-key"></span></div>
                     <div class="key white-note mi-key rounded-border border-bottom" data-key="D+<br>⇧" data-note="mi2"><span class="keyboard-key"></span></div>
-                    <div class="key white-note fa-key rounded-border border-bottom" data-key="E+<br>⇧" data-note="fa2"><span class="keyboard-key"></span></div>
-                    <div class="key black-note fa#-key rounded-border border-bottom" data-key="F+<br>⇧" data-note="fa#2"><span class="keyboard-key"></span></div>
-                    <div class="key white-note sol-key rounded-border border-bottom" data-key="R+<br>⇧" data-note="sol2"><span class="keyboard-key"></span></div>
-                    <div class="key black-note sol#-key rounded-border border-bottom" data-key="G+<br>⇧" data-note="sol#2"><span class="keyboard-key"></span></div>
-                    <div class="key white-note la-key rounded-border border-bottom" data-key="T+<br>⇧" data-note="la2"><span class="keyboard-key"></span></div>
-                    <div class="key black-note la#-key rounded-border border-bottom" data-key="H+<br>⇧" data-note="la#2"><span class="keyboard-key"></span></div>
-                    <div class="key white-note si-key rounded-border border-bottom" data-key="Y+<br>⇧" data-note="si2"><span class="keyboard-key"></span></div>
+                    <div class="key white-note fa-key rounded-border border-bottom" data-key="F+<br>⇧" data-note="fa2"><span class="keyboard-key"></span></div>
+                    <div class="key black-note solb-key rounded-border border-bottom" data-key="T+<br>⇧" data-note="solb2"><span class="keyboard-key"></span></div>
+                    <div class="key white-note sol-key rounded-border border-bottom" data-key="G+<br>⇧" data-note="sol2"><span class="keyboard-key"></span></div>
+                    <div class="key black-note lab-key rounded-border border-bottom" data-key="Y+<br>⇧" data-note="lab2"><span class="keyboard-key"></span></div>
+                    <div class="key white-note la-key rounded-border border-bottom" data-key="H+<br>⇧" data-note="la2"><span class="keyboard-key"></span></div>
+                    <div class="key black-note sib-key rounded-border border-bottom" data-key="U+<br>⇧" data-note="sib2"><span class="keyboard-key"></span></div>
+                    <div class="key white-note si-key rounded-border border-bottom" data-key="J+<br>⇧" data-note="si2"><span class="keyboard-key"></span></div>
                 </section>
     
                 <section class="octava central">
-                    <div class="key white-note do-key rounded-border border-bottom" data-key="A" data-note="do3"><span class="keyboard-key"></span></div>
-                    <div class="key black-note do#-key rounded-border border-bottom" data-key="Q" data-note="do#3"><span class="keyboard-key"></span></div>
-                    <div class="key white-note re-key rounded-border border-bottom"  data-key="S" data-note="re3"><span class="keyboard-key"></span></div>
-                    <div class="key black-note re#-key rounded-border border-bottom"  data-key="W" data-note="re#3"><span class="keyboard-key"></span></div>
-                    <div class="key white-note mi-key rounded-border border-bottom"  data-key="D" data-note="mi3"><span class="keyboard-key"></span></div>
-                    <div class="key white-note fa-key rounded-border border-bottom"  data-key="E" data-note="fa3"><span class="keyboard-key"></span></div>
-                    <div class="key black-note fa#-key rounded-border border-bottom"  data-key="F" data-note="fa#3"><span class="keyboard-key"></span></div>
-                    <div class="key white-note sol-key rounded-border border-bottom"  data-key="R" data-note="sol3"><span class="keyboard-key"></span></div>
-                    <div class="key black-note sol#-key rounded-border border-bottom" data-key="G" data-note="sol#3"><span class="keyboard-key"></span></div>
-                    <div class="key white-note la-key rounded-border border-bottom"  data-key="T" data-note="la3"><span class="keyboard-key"></span></div>
-                    <div class="key black-note la#-key rounded-border border-bottom" data-key="H" data-note="la#3"><span class="keyboard-key"></span></div>
-                    <div class="key white-note si-key rounded-border border-bottom" data-key="Y" data-note="si3"><span class="keyboard-key"></span></div>
+                    <div class="key white-note do-key rounded-border border-bottom" data-key="a" data-note="do3"><span class="keyboard-key"></span></div>
+                    <div class="key black-note reb-key rounded-border border-bottom" data-key="w" data-note="reb3"><span class="keyboard-key"></span></div>
+                    <div class="key white-note re-key rounded-border border-bottom"  data-key="s" data-note="re3"><span class="keyboard-key"></span></div>
+                    <div class="key black-note mib3-key rounded-border border-bottom"  data-key="e" data-note="mib3"><span class="keyboard-key"></span></div>
+                    <div class="key white-note mi-key rounded-border border-bottom"  data-key="d" data-note="mi3"><span class="keyboard-key"></span></div>
+                    <div class="key white-note fa-key rounded-border border-bottom"  data-key="f" data-note="fa3"><span class="keyboard-key"></span></div>
+                    <div class="key black-note solb3-key rounded-border border-bottom"  data-key="t" data-note="solb3"><span class="keyboard-key"></span></div>
+                    <div class="key white-note sol-key rounded-border border-bottom"  data-key="g" data-note="sol3"><span class="keyboard-key"></span></div>
+                    <div class="key black-note lab3-key rounded-border border-bottom" data-key="y" data-note="lab3"><span class="keyboard-key"></span></div>
+                    <div class="key white-note la-key rounded-border border-bottom"  data-key="h" data-note="la3"><span class="keyboard-key"></span></div>
+                    <div class="key black-note sib3-key rounded-border border-bottom" data-key="u" data-note="sib3"><span class="keyboard-key"></span></div>
+                    <div class="key white-note si-key rounded-border border-bottom" data-key="j" data-note="si3"><span class="keyboard-key"></span></div>
                 </section>
+
                 <section class="octava superior">
                     <div class="key white-note do-key rounded-border border-bottom" data-key="A+<br>↹" data-note="do4"><span class="keyboard-key"></span></div>
-                    <div class="key black-note do#-key rounded-border border-bottom" data-key="Q+<br>↹" data-note="reb4"><span class="keyboard-key"></span></div>
+                    <div class="key black-note reb-key rounded-border border-bottom" data-key="W+<br>↹" data-note="reb4"><span class="keyboard-key"></span></div>
                     <div class="key white-note re-key rounded-border border-bottom" data-key="S+<br>↹" data-note="re4"><span class="keyboard-key"></span></div>
-                    <div class="key black-note re#-key rounded-border border-bottom" data-key="W+<br>↹" data-note="mib4"><span class="keyboard-key"></span></div>
+                    <div class="key black-note mib-key rounded-border border-bottom" data-key="E+<br>↹" data-note="mib4"><span class="keyboard-key"></span></div>
                     <div class="key white-note mi-key rounded-border border-bottom" data-key="D+<br>↹" data-note="mi4"><span class="keyboard-key"></span></div>
-                    <div class="key white-note fa-key rounded-border border-bottom" data-key="E+<br>↹" data-note="fa4"><span class="keyboard-key"></span></div>
-                    <div class="key black-note fa#-key rounded-border border-bottom" data-key="F+<br>↹" data-note="solb4"><span class="keyboard-key"></span></div>
-                    <div class="key white-note sol-key rounded-border border-bottom" data-key="R+<br>↹" data-note="sol4"><span class="keyboard-key"></span></div>
-                    <div class="key black-note sol#-key rounded-border border-bottom" data-key="G+<br>↹" data-note="lab4"><span class="keyboard-key"></span></div>
-                    <div class="key white-note la-key rounded-border border-bottom" data-key="T+<br>↹" data-note="la4"><span class="keyboard-key"></span></div>
-                    <div class="key black-note la#-key rounded-border border-bottom" data-key="H+<br>↹" data-note="sib4"><span class="keyboard-key"></span></div>
-                    <div class="key white-note si-key rounded-border border-bottom" data-key="Y+<br>↹" data-note="si4"><span class="keyboard-key"></span></div>
+                    <div class="key white-note fa-key rounded-border border-bottom" data-key="F+<br>↹" data-note="fa4"><span class="keyboard-key"></span></div>
+                    <div class="key black-note solb-key rounded-border border-bottom" data-key="T+<br>↹" data-note="solb4"><span class="keyboard-key"></span></div>
+                    <div class="key white-note sol-key rounded-border border-bottom" data-key="G+<br>↹" data-note="sol4"><span class="keyboard-key"></span></div>
+                    <div class="key black-note lab-key rounded-border border-bottom" data-key="Y+<br>↹" data-note="lab4"><span class="keyboard-key"></span></div>
+                    <div class="key white-note la-key rounded-border border-bottom" data-key="H+<br>↹" data-note="la4"><span class="keyboard-key"></span></div>
+                    <div class="key black-note sib-key rounded-border border-bottom" data-key="U+<br>↹" data-note="sib4"><span class="keyboard-key"></span></div>
+                    <div class="key white-note si-key rounded-border border-bottom" data-key="J+<br>↹" data-note="si4"><span class="keyboard-key"></span></div>
                 </section>
             </section>
             
@@ -112,6 +115,7 @@
             <p>Si te gusta nuestro piano gratuito, ¡espera a ver nuestros cursos online de piano!. Accede a la escuela online donde encontrarás cursos divididos por niveles e instrumentos, donde pedagogos expertos en música enseñarán a los más pequeños a tocar un instrumento desde cero.</p>
         </section>
     </main>
+
     <footer>
         <div class="footer-column-left">
             <a href="#">Contacta con nosotros</a>
@@ -122,7 +126,7 @@
         </div>
     </footer>
 
-    <script src="./js/script_piano.js"></script>
+    <script src="./js/script-piano.js"></script>
 </body>
 
 </html>
