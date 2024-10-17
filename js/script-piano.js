@@ -92,3 +92,39 @@ function juego() {
     charText.textContent = NOTAS_CANCION[i] + ' / ' + LETRAS_CANCION[i];
 }
 jugarBtn.addEventListener('click', juego);
+
+function juegoTeclas() {
+  const NOTAS_CANCION = ["re3", "mi3", "sol3", "sol3", "sol3", "sol3", "sol3", "sol3", "re3", "mi3", "sol3", "sol3", "sol3", "sol3", "sol3", "sol3", "sol3", "sol3", "solb3"];
+  const LETRAS_CANCION = ["s", "d", "g", "g", "g", "g", "g", "g", "s", "d", "g", "g", "g", "g", "g", "g", "g", "g", "t"];
+  let i = 0;
+  let cancionFinalizada = false;
+  
+  function comprobarTecla(e) {
+    if (cancionFinalizada) return;
+
+    const letraPulsada = e.key.toLowerCase();  
+    const letraActual = LETRAS_CANCION[i];  
+    const notaActual = NOTAS_CANCION[i];  
+    
+    charText.textContent = notaActual + ' / ' + letraActual;
+
+    if (letraPulsada === letraActual) {
+      i++;
+      if (i < NOTAS_CANCION.length) {
+        charText.textContent = NOTAS_CANCION[i] + ' / ' + LETRAS_CANCION[i];
+      } else {
+        cancionFinalizada = true;
+        charText.textContent = '¡Canción finalizada!';
+      }
+    } else {
+      charText.textContent = '¡Error! Inténtalo de nuevo';
+    }
+  }
+
+  document.addEventListener('keydown', comprobarTecla);
+
+  charText.textContent = NOTAS_CANCION[i] + ' / ' + LETRAS_CANCION[i];
+}
+
+jugarBtn.addEventListener('click', juegoTeclas);
+
